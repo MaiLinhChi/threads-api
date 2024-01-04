@@ -15,13 +15,13 @@ app.use(routes);
 // apply swagger
 app.use(
     swagger({
-        path: "/documentation",
         documentation: {
             info: {
                 title: "Welcome to Threads api",
                 version: "1.0.0",
             },
         },
+        excludeStaticFile: false,
     }),
 );
 

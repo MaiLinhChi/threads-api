@@ -1,10 +1,11 @@
 import type Elysia from "elysia";
-import AuthController from "../controllers/auth.controller";
+import AuthHandler from "../handlers/auth.handler";
+import { signInHook, signUpHook } from "../hooks/auth.hook";
 
 const authRoutes = (app: Elysia) => {
     app.group("/auth", (app) => {
-        app.get("/sign-in", AuthController.signIn);
-        app.get("/sign-up", AuthController.signUp);
+        app.get("/sign-in", AuthHandler.signIn, signInHook);
+        app.get("/sign-up", AuthHandler.signUp, signUpHook);
 
         return app;
     });

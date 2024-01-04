@@ -28,6 +28,6 @@ class Auth {
         return handler;
     }
 }
-const AuthController = new Auth();
+const AuthHandler = new Auth();
 
-export default AuthController;
+export default AuthHandler;
