@@ -21,7 +21,7 @@ app.use(
                 version: "1.0.0",
             },
         },
-        excludeStaticFile: false,
+        exclude: "/",
     }),
 );
 
